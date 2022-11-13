@@ -16,10 +16,10 @@ template < typename T>
 			{
 				public:
 					T data;
-				Scapenode *left, *right, *parent;
-				Scapenode(): data(0), left(0), right(0), parent(0) {}
+					Scapenode *left, *right, *parent;
+					Scapenode(): data(0), left(0), right(0), parent(0) {}
 
-				Scapenode(T element): data(element), left(0), right(0), parent(0) {}
+					Scapenode(T element): data(element), left(0), right(0), parent(0) {}
 			};
 
 		typedef Scapenode * NodePointer;
