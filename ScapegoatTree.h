@@ -25,32 +25,32 @@ template < typename T>
 		typedef Scapenode * NodePointer;
 		public:
 			ScapegoatTree();
-		ScapegoatTree(const ScapegoatTree<T> &orig);
-		//    ~ScapegoatTree();
-		bool empty() const;
-		bool remove(T value);
-		void insert(T value);
-		NodePointer search(T value) const;
-		//return mysize of the whole tree
-		int size() const;
-		//display the values of the tree in ascending order
-		void inorder() const;
+			ScapegoatTree(const ScapegoatTree<T> &orig);
+			//    ~ScapegoatTree();
+			bool empty() const;
+			bool remove(T value);
+			void insert(T value);
+			NodePointer search(T value) const;
+			//return mysize of the whole tree
+			int size() const;
+			//display the values of the tree in ascending order
+			void inorder() const;
 
 		private:
 			NodePointer root;
-		int mysize;
-		int q;	// overestimate of size -> q * a <= n <= q
-		//return mysize of a subtree p
-		int size(NodePointer p) const;
-		void inorder(NodePointer p) const;
-		bool remove(NodePointer p);
-		NodePointer getsuccessor(NodePointer p);
-		NodePointer search(NodePointer p, T value);
-		inline double log3_2(int q) const;
-		int insertwithdepth(NodePointer p);
-		NodePointer buildbalanced(vector<NodePointer> &v);
-		void putinarray(vector<NodePointer> &v, NodePointer p);
-		void rebuild(NodePointer p);
+			int mysize;
+			int q;	// overestimate of size -> q * a <= n <= q
+			//return mysize of a subtree p
+			int size(NodePointer p) const;
+			void inorder(NodePointer p) const;
+			bool remove(NodePointer p);
+			NodePointer getsuccessor(NodePointer p);
+			NodePointer search(NodePointer p, T value);
+			inline double log3_2(int q) const;
+			int insertwithdepth(NodePointer p);
+			NodePointer buildbalanced(vector<NodePointer> &v);
+			void putinarray(vector<NodePointer> &v, NodePointer p);
+			void rebuild(NodePointer p);
 	};
 
 template < typename T>
