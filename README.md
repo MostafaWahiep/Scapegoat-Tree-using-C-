@@ -9,7 +9,7 @@ An implementation of the Scapegoat Tree data structure in C++.
 A Scapegoat Tree is a self-balancing binary search tree that can be used to store a collection of values. It was first introduced by Galperin and Rivest in 1993. The main idea behind the Scapegoat Tree is to use a dynamic threshold to determine when to rebuild the tree to maintain balance. This threshold is based on an alpha coefficient that is typically between 1/2 and 1. In this implementation, the alpha coefficient is set to 2/3.
 ## Implementation
 
-The ScapegoatTree class is implemented using a nested Scapenode class that represents a node in the tree. The tree is implemented as a binary search tree with the Scapenode class containing pointers to the left and right children as well as the parent node. The tree is balanced using the Scapegoat Tree algorithm, which rebuilds the tree when the imbalance exceeds a certain threshold.
+The ScapegoatTree class is implemented using a nested Scapenode class that represents a node in the tree. The tree is implemented as a binary search tree with the Scapenode class containing pointers to the left and right children as well as the parent node. The tree is balanced using the Scapegoat Tree algorithm, which rebuilds the tree when the imbalance exceeds a certain threshold taking amortized O(Log n) for deletion and insertion and Search time is O(Log n) in worst case.
 
 The threshold for rebuilding the tree is determined by the q parameter, which is an overestimate of the number of nodes in the tree. The q parameter is updated after each insertion and deletion operation to ensure that the tree is balanced. The α coefficient used in the Scapegoat Tree algorithm is set to 2/3 in this implementation.
 
